@@ -1,18 +1,7 @@
 import { useState } from "react";
 import { playPop, playSuccess, playClick } from "@/hooks/useSoundEffects";
 import SectionBlock from "./SectionBlock";
-import {
-  Mail,
-  MapPin,
-  Copy,
-  Check,
-  ArrowRight,
-  Github,
-  Linkedin,
-  MessageCircle,
-  InstagramIcon,
-  BookOpen,
-} from "lucide-react";
+import { Mail, Github, Send, Copy, ExternalLink, Check, MessageCircle, MapPin, ArrowRight } from "lucide-react";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -21,14 +10,14 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     playSuccess();
-    const phoneNumber = "+919550533315";
+    const phoneNumber = "1234567890"; // Placeholder
     const text = `Name: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`;
     const encodedText = encodeURIComponent(text);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedText}`, "_blank");
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("pappuridurgavaraprasad4pl@gmail.com");
+    navigator.clipboard.writeText("travisgunna18@gmail.com");
     playPop();
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -46,7 +35,7 @@ const ContactSection = () => {
           </p>
 
           <div className="space-y-6">
-            <div className="group flex items-center gap-4 p-4 border border-foreground/10 bg-white/50 hover:border-black transition-colors duration-300">
+            <div className="group flex items-center gap-4 p-4 border border-foreground/10 bg-white/50 hover:border-black transition-all duration-300 shadow-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-[2px] hover:-translate-y-[2px]">
               <div className="p-3 bg-black text-white self-start">
                 <Mail className="w-5 h-5" />
               </div>
@@ -54,8 +43,8 @@ const ContactSection = () => {
                 <p className="text-xs uppercase tracking-widest text-foreground/50 mb-1">
                   Email
                 </p>
-                <p className="font-mono text-sm break-all">
-                  pappuridurgavaraprasad4pl@gmail.com
+                <p className="font-mono text-sm break-all font-bold">
+                  travisgunna18@gmail.com
                 </p>
               </div>
               <button
@@ -71,16 +60,27 @@ const ContactSection = () => {
               </button>
             </div>
 
-            <div className="flex items-center gap-4 p-4 border border-foreground/10 bg-white/50 hover:border-black transition-colors duration-300">
+            <div className="group flex items-center gap-4 p-4 border border-foreground/10 bg-white/50 hover:border-black transition-all duration-300 shadow-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-[2px] hover:-translate-y-[2px]">
               <div className="p-3 bg-black text-white self-start">
-                <MessageCircle className="w-5 h-5" />
+                <Send className="w-5 h-5" />
               </div>
-              <div>
+              <div className="flex-1 min-w-0">
                 <p className="text-xs uppercase tracking-widest text-foreground/50 mb-1">
-                  Whatsapp
+                  Telegram
                 </p>
-                <p className="font-mono text-sm">+91 9550533315</p>
+                <p className="font-mono text-sm break-all font-bold">
+                  @utakatatendo2
+                </p>
               </div>
+              <a
+                href="https://t.me/utakatatendo2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 hover:bg-black/5 rounded-full transition-colors relative"
+                title="Open Telegram"
+              >
+                <ExternalLink className="w-4 h-4 text-foreground/40" />
+              </a>
             </div>
           </div>
 
@@ -90,13 +90,8 @@ const ContactSection = () => {
             </p>
             <div className="flex gap-4">
               {[
-                { Icon: Github, href: "https://github.com/VARA4u-tech" },
-                { Icon: Linkedin, href: "https://linkedin.com/in/vara4u" },
-                { Icon: InstagramIcon, href: "https://instagram.com/d_v_p6" },
-                {
-                  Icon: BookOpen,
-                  href: "https://durgavaraprasad.hashnode.dev/",
-                },
+                { Icon: Github, href: "https://github.com/Ralph-svgz" },
+                { Icon: Send, href: "https://t.me/utakatatendo2" },
               ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
@@ -157,14 +152,15 @@ const ContactSection = () => {
             </label>
           </div>
 
-          <button
-            type="submit"
-            className="w-full group relative flex items-center justify-center gap-3 px-8 py-4 bg-black text-white font-mono uppercase tracking-widest overflow-hidden transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.5)] hover:-translate-y-1 active:translate-y-0 active:shadow-none"
+          <a
+            href="https://t.me/utakatatendo2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 border-2 border-black bg-black text-white text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)] hover:bg-white hover:text-black hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
           >
-            <span className="relative z-10 font-bold">Send via WhatsApp</span>
-            <MessageCircle className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
-            <div className="absolute inset-0 bg-green-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </button>
+            <span>Message on Telegram</span>
+            <Send className="w-4 h-4" />
+          </a>
         </form>
       </div>
     </SectionBlock>

@@ -13,7 +13,7 @@ const AnimatedAvatar = () => {
         <div className="w-full h-full animate-[float_6s_ease-in-out_infinite]">
           <img
             src="https://i.ibb.co/20jtF9Lm/Chat-GPT-Image-Feb-14-2026-10-13-36-PM.png"
-            alt="Pappuri Durga Vara Prasad"
+            alt="Raphel Sam"
             className="w-full h-full object-cover object-top"
             loading="eager"
           />

@@ -1,68 +1,17 @@
-import {
-  Github,
-  Linkedin,
-  InstagramIcon,
-  Mail,
-  Heart,
-  BookOpen,
-} from "lucide-react";
+import { Github, Mail, Send, Heart } from "lucide-react";
 
 const Finale = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/VARA4u-tech", label: "GitHub" },
-    {
-      icon: Linkedin,
-      href: "https://linkedin.com/in/vara4u",
-      label: "LinkedIn",
-    },
-    {
-      icon: Mail,
-      href: "mailto:pappuridurgavaraprasad4pl@gmail.com",
-      label: "Email",
-    },
-    {
-      icon: InstagramIcon,
-      href: "https://instagram.com/d_v_p6",
-      label: "Instagram",
-    },
-    {
-      icon: BookOpen,
-      href: "https://durgavaraprasad.hashnode.dev/",
-      label: "Blog",
-    },
-  ];
-
-  const marqueeTags = [
-    "Durga Vara Prasad 🚀",
-    "Full Stack Dev | Flutter | React | Blockchain | AI",
-    "Designing clean UI/UX + Smart solutions🔖",
-    "Exploring tech through Vibe Coding",
+    { icon: Github, href: "https://github.com/Ralph-svgz", label: "GitHub" },
+    { icon: Send, href: "https://t.me/utakatatendo2", label: "Telegram" },
+    { icon: Mail, href: "mailto:travisgunna18@gmail.com", label: "Email" },
   ];
 
   return (
-    <section className="relative w-full bg-white border-t-8 border-black pt-20 overflow-hidden">
-      {/* ... marquee ... */}
-      <div className="absolute top-0 left-0 w-full py-4 bg-black overflow-hidden flex whitespace-nowrap">
-        <div className="animate-marquee flex items-center shrink-0">
-          {[...Array(10)].map((_, i) => (
-            <div key={i} className="flex items-center">
-              {marqueeTags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-white font-mono text-xs uppercase tracking-[0.3em] mx-10"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-6 py-20 flex flex-col items-center">
-        {/* ... content ... */}
+    <section className="relative w-full bg-white border-t-8 border-black pt-20 pb-20 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col items-center">
         <div className="relative mb-20 text-center">
           <h2 className="text-[12vw] md:text-[8vw] font-black uppercase leading-none tracking-tighter text-black/5 absolute -top-1/2 left-1/2 -translate-x-1/2 select-none pointer-events-none">
             THANK YOU
@@ -76,7 +25,7 @@ const Finale = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full mb-24">
           {socialLinks.map((link) => (
             <a
               key={link.label}
@@ -92,33 +41,17 @@ const Finale = () => {
             </a>
           ))}
         </div>
-
-        <div className="flex flex-col md:flex-row items-center gap-4 text-center">
-          <div className="flex items-center gap-2 px-4 py-2 bg-green-100 border-2 border-green-600 rounded-full">
-            <span className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
-            <span className="text-[10px] font-black uppercase tracking-widest text-green-800">
-              Available for Freelance Projects
-            </span>
-          </div>
-          <p className="text-xs font-mono text-black/70 uppercase tracking-widest leading-loose max-w-sm">
-            From India 🇮🇳 to the World 🌍 • Crafting Scalable Digital Products
-          </p>
-        </div>
       </div>
 
-      {/* Extreme Bottom Bar */}
-      <div className="w-full bg-white pt-10 pb-24 md:pb-10 px-6 mt-auto border-t border-black/10">
+      <div className="w-full bg-white py-10 px-6 mt-12 border-t border-black/10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 opacity-70">
-          <p className="text-[10px] md:text-[11px] font-mono text-black uppercase tracking-[0.1em] md:tracking-[0.2em] text-center md:text-left">
-            © {currentYear} Pappuri Durga Vara Prasad
+          <p className="text-[10px] md:text-[11px] font-mono text-black uppercase tracking-[0.2em] text-center md:text-left">
+            © {currentYear} Raphel Sam
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[10px] md:text-[11px] font-mono text-black uppercase tracking-[0.1em] md:tracking-[0.2em] text-center md:text-right font-medium">
-            <span className="whitespace-nowrap">Designed & Engineered</span>
-            <span className="flex items-center gap-2">
-              <span>with</span>
-              <Heart className="w-3.5 h-3.5 text-black fill-black animate-heartbeat inline-block" />
-              <span>by Vara</span>
-            </span>
+          <div className="flex items-center gap-2 text-[10px] md:text-[11px] font-mono text-black uppercase tracking-[0.2em]">
+            <span>Designed & Engineered with</span>
+            <Heart className="w-3.5 h-3.5 text-black fill-black animate-heartbeat" />
+            <span>by Raphel</span>
           </div>
         </div>
       </div>

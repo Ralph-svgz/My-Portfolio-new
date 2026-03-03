@@ -2,11 +2,33 @@ import SectionBlock from "./SectionBlock";
 
 const experiences = [
   {
-    role: "MERN Stack Developer (Freelance)",
-    company: "Academy of Tech Masters (AOTMS)",
-    period: "[23DEC 2025 – 23JAN 2026]",
-    description:
-      "🚀Freelance Project – Successfully Delivered Completed a real-world client project with my team using [Tech Stack – e.g., React, Node.js, MongoDB]. Key learnings: 🔹 Building scalable features 🔹 Team collaboration & Git workflows 🔹 Meeting client expectations & deadlines.",
+    role: "AI Training Specialist & Data Annotator",
+    company: "Freelance / Contract",
+    period: "2024 – Present",
+    description: [
+      "Evaluated and ranked AI-generated responses using RLHF methodologies.",
+      "Annotated datasets for ML pipelines with 95%+ quality.",
+      "Conducted bilingual search relevance and content evaluation."
+    ],
+  },
+  {
+    role: "Full-Stack Software Engineer",
+    company: "Freelance / Independent Projects",
+    period: "2023 – Present",
+    description: [
+      "Built AI-powered meme generator (BrickMeme) with Next.js, React, Fabric.js, and AI APIs (DALL-E 3, FLUX.1).",
+      "Developed responsive web apps with TypeScript, Tailwind CSS."
+    ],
+  },
+  {
+    role: "Document & Content Reviewer",
+    company: "Freelance / Contract",
+    period: "2024 – Present",
+    description: [
+      "Reviewed technical documentation and content for accuracy.",
+      "Evaluated multilingual content (EN/FR) for quality.",
+      "Provided structured feedback with actionable recommendations."
+    ],
   },
 ];
 
@@ -35,7 +57,14 @@ const ExperienceSection = () => (
             <h3 className="text-xl font-bold text-foreground hidden md:block mb-3">
               {exp.role}
             </h3>
-            <p className="body-text text-sm md:text-base">{exp.description}</p>
+            <ul className="space-y-2 mt-3">
+              {exp.description.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span className="text-primary text-sm shrink-0 mt-[2px]">▸</span>
+                  <span className="body-text text-sm md:text-base">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       ))}

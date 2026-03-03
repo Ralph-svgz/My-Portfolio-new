@@ -9,7 +9,7 @@ const GithubGraph = () => {
       </h3>
       <div className="flex justify-center overflow-x-auto pb-2">
         <GitHubCalendar
-          username="VARA4u-tech"
+          username="Ralph-svgz"
           colorScheme="light"
           style={{
             fontFamily: "monospace",

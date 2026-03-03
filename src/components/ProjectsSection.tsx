@@ -6,74 +6,42 @@ import { playHover, playClick } from "@/hooks/useSoundEffects";
 
 const projects = [
   {
-    title: "SafeTrip Pro",
+    title: "BrickMeme",
     isNew: true,
     description:
-      "A premium, AI-powered navigation and safety companion featuring real-time intelligence, drowsiness detection, SOS guardian network, and predictive analytics for a safer driving experience.",
+      "An AI-powered meme generator web application featuring real-time canvas editing with Fabric.js, AI image generation integration (DALL-E 3, FLUX.1), and state management with Zustand.",
     tags: [
+      "Next.js",
       "React",
       "TypeScript",
-      "Tailwind",
-      "Supabase",
-      "Framer Motion",
-      "Vite",
-    ],
-    githubUrl:
-      "https://github.com/VARA4u-tech/safe-trip-smart-driving-safety-application",
-    liveUrl: "https://safe-trip-smart-driving-safety-appl.vercel.app",
-  },
-  {
-    title: "Academy of Tech Masters (AOTMS)",
-    description:
-      "A premier tech education platform featuring AI-powered assistance, interactive student dashboards, and comprehensive course management. Delivered as a high-performance freelance project for a real-world client.",
-    tags: [
-      "React",
-      "TypeScript",
-      "Tailwind",
-      "Vite",
+      "Fabric.js",
+      "Tailwind CSS",
       "Zustand",
-      "Framer Motion",
     ],
-    githubUrl: "https://github.com/VARA4u-tech/AOTMS",
-    liveUrl: "https://aotms.in",
+    githubUrl: "https://github.com/Ralph-svgz", // Updated to your github
+    liveUrl: "https://brickmeme.com",
   },
   {
-    title: "Elara Cosmetics",
+    title: "Python Game Engine",
     description:
-      "A luxury Ayurvedic e-commerce platform with a focus on premium user experience. Features category-based filtering, shopping cart, wishlist, and a custom WhatsApp-integrated checkout system.",
-    tags: ["React", "TypeScript", "Tailwind", "Vite", "Shadcn UI", "Vitest"],
-    githubUrl:
-      "https://github.com/VARA4u-tech/Elara-Cosmetics-E--Commerce-Website-",
-    liveUrl: "https://elara-cosmetics.vercel.app/",
+      "A custom-built 2D game engine developed in Python, focusing on modular architecture, physics simulation, and real-time rendering capabilities.",
+    tags: ["Python", "Pygame", "Game Dev", "Algorithms"],
+    githubUrl: "https://github.com/Ralph-svgz",
+    liveUrl: "#",
   },
   {
-    title: "EduPredict",
+    title: "Canvas-based Interactive Tools",
     description:
-      "An AI-powered predictive analytics system for student success, featuring a unique comic book-inspired UI, interactive dashboards, and real-time at-risk student alerts.",
-    tags: [
-      "React",
-      "TypeScript",
-      "Tailwind",
-      "Vite",
-      "Lucide React",
-      "Framer Motion",
-    ],
-    githubUrl: "https://github.com/VARA4u-tech/EduPredict",
-    liveUrl: "https://edu-pridect.vercel.app/",
-  },
-  {
-    title: "SmartQuack",
-    description:
-      "A delightful, offline-first task manager with a gamified twist! Features a reactive duck mascot that changes moods based on your productivity progress.",
-    tags: ["Flutter", "Riverpod", "Firebase", "Hive", "Dart"],
-    githubUrl: "https://github.com/VARA4u-tech/my-first-flutter-app",
-    liveUrl: "https://github.com/VARA4u-tech/my-first-flutter-app",
+      "A suite of web-based tools utilizing HTML5 Canvas and Fabric.js for real-time image manipulation, custom overlays, and interactive design elements.",
+    tags: ["JavaScript", "HTML5 Canvas", "Fabric.js", "Web Dev"],
+    githubUrl: "https://github.com/Ralph-svgz",
+    liveUrl: "#",
   },
 ];
 
 const ProjectsSection = () => (
   <SectionBlock id="projects" title="Projects">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       {projects.map((project) => (
         <div
           key={project.title}

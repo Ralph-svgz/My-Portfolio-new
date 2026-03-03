@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -53,8 +53,8 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: "Inter", sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: "Outfit", sans-serif;
     background-image: url("/images/paper-texture.png");
     background-repeat: repeat;
     background-size: auto;
@@ -68,21 +68,27 @@
 
 @layer utilities {
   .heading-brutal {
-    @apply font-black tracking-tighter leading-none text-foreground;
+    @apply font-black tracking-[-0.04em] leading-none text-foreground;
   }
 
   .section-title {
-    @apply font-black tracking-tighter leading-none text-foreground;
-    font-size: clamp(3rem, 8vw, 7rem);
+    @apply font-black tracking-[-0.04em] leading-none text-foreground;
+    font-size: clamp(3rem, 10vw, 8rem);
   }
 
   .body-text {
     @apply text-foreground/80 leading-relaxed font-light;
-    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
   }
 
   .nav-link {
-    @apply uppercase text-xs tracking-[0.2em] text-foreground hover:text-foreground/70 font-medium transition-colors duration-300;
+    @apply uppercase text-[10px] tracking-[0.25em] text-foreground hover:text-foreground/70 transition-colors duration-300;
+    font-family: "Space+Mono", monospace;
+    font-weight: 700;
+  }
+
+  .font-mono {
+    font-family: "Space Mono", monospace !important;
   }
 
   .fade-in {
@@ -136,22 +142,5 @@
 
   .animate-heartbeat {
     animation: heartbeat 1.5s ease-in-out infinite;
-  }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .animate-marquee {
-    animation: marquee 60s linear infinite;
-  }
-
-  .animate-marquee-reverse {
-    animation: marquee 60s linear infinite reverse;
   }
 }

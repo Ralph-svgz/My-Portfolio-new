@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphel Sam — AI Training & Data Annotation Resume</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            color: #1a1a2e;
+            background: #e8eaf0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .resume {
+            width: 210mm;
+            min-height: 297mm;
+            background: #fff;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+
+            .resume {
+                box-shadow: none;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* === LEFT SIDEBAR === */
+        .sidebar {
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            padding: 28px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .sidebar .name {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .sidebar .tagline {
+            font-family: 'Outfit', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #60a5fa;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .sidebar .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 2px 0;
+        }
+
+        .sidebar .section-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 10.5px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #60a5fa;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        /* Contact */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #cbd5e1;
+            margin-bottom: 4px;
+        }
+
+        .contact-icon {
+            font-size: 12px;
+            width: 16px;
+            text-align: center;
+        }
+
+        /* Languages */
+        .lang-item {
+            margin-bottom: 6px;
+        }
+
+        .lang-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 2px;
+        }
+
+        .lang-bar-bg {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .lang-bar {
+            height: 100%;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        }
+
+        /* Skills tags */
+        .skill-tag {
+            display: inline-block;
+            font-size: 11px;
+            background: rgba(96, 165, 250, 0.15);
+            color: #93c5fd;
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin: 2px 2px;
+            font-weight: 500;
+        }
+
+        /* Platforms */
+        .platform-item {
+            font-size: 10px;
+            color: #cbd5e1;
+            margin-bottom: 3px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .platform-item::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+        }
+
+        /* === MAIN CONTENT === */
+        .main {
+            padding: 28px 28px 20px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .main .section-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #3b82f6;
+            font-weight: 700;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #dbeafe;
+            margin-bottom: 6px;
+        }
+
+        /* Header banner */
+        .header-banner {
+            background: linear-gradient(135deg, #dbeafe 0%, #ede9fe 100%);
+            border-radius: 8px;
+            padding: 14px 18px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .header-banner .title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+
+        .header-banner p {
+            font-size: 12px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 12px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .exp-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .exp-date {
+            font-size: 12px;
+            color: #3b82f6;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .exp-company {
+            font-size: 12px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exp-bullets li {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #334155;
+            padding-left: 14px;
+            position: relative;
+            margin-bottom: 2px;
+        }
+
+        .exp-bullets li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-size: 10px;
+        }
+
+        /* Qualifications grid */
+        .qual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+
+        .qual-item {
+            font-size: 12px;
+            color: #334155;
+            padding-left: 14px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .qual-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        /* Education */
+        .edu-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .edu-detail {
+            font-size: 12px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        /* Tech skills grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 75px 1fr;
+            gap: 4px 10px;
+        }
+
+        .tech-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .tech-value {
+            font-size: 12px;
+            color: #475569;
+        }
+
+        /* Print button */
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(30, 64, 175, 0.4);
+            transition: all 0.2s;
+            z-index: 100;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(30, 64, 175, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume">
+
+        <!-- ===== LEFT SIDEBAR ===== -->
+        <div class="sidebar">
+
+            <div>
+                <div class="name">Raphel<br>Sam</div>
+                <div style="height:6px"></div>
+                <div class="tagline">AI Training Specialist</div>
+                <div class="tagline" style="margin-top:2px;">Data Annotator</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Contact -->
+            <div>
+                <div class="section-title">Contact</div>
+                <div class="contact-item"><span class="contact-icon">📍</span> United States (Remote)</div>
+                <div class="contact-item"><span class="contact-icon">🌐</span> Open to Global Remote</div>
+                <div class="contact-item"><span class="contact-icon">⏰</span> Flexible Schedule</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Languages -->
+            <div>
+                <div class="section-title">Languages</div>
+                <div class="lang-item">
+                    <div class="lang-name">English <span style="font-weight:400;font-size:9px;color:#94a3b8">—
+                            Native</span></div>
+                    <div class="lang-bar-bg">
+                        <div class="lang-bar" style="width:100%"></div>
+                    </div>
+                </div>
+                <div class="lang-item">
+                    <div class="lang-name">French <span style="font-weight:400;font-size:9px;color:#94a3b8">—
+                            Professional</span></div>
+                    <div class="lang-bar-bg">
+                        <div class="lang-bar" style="width:80%"></div>
+                    </div>
+                </div>
+                <div class="lang-item">
+                    <div class="lang-name">Japanese <span style="font-weight:400;font-size:9px;color:#94a3b8">—
+                            Basic</span></div>
+                    <div class="lang-bar-bg">
+                        <div class="lang-bar" style="width:35%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Core Competencies -->
+            <div>
+                <div class="section-title">Core Skills</div>
+                <span class="skill-tag">RLHF</span>
+                <span class="skill-tag">Data Labeling</span>
+                <span class="skill-tag">Prompt Engineering</span>
+                <span class="skill-tag">Content Review</span>
+                <span class="skill-tag">Search Evaluation</span>
+                <span class="skill-tag">AI Evaluation</span>
+                <span class="skill-tag">Quality Assurance</span>
+                <span class="skill-tag">Transcription</span>
+                <span class="skill-tag">Text Annotation</span>
+                <span class="skill-tag">Image Annotation</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">SQL</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Certifications -->
+            <div>
+                <div class="section-title">Certifications</div>
+                <span class="skill-tag">Google AI Essentials</span>
+                <span class="skill-tag">Prompt Engineering</span>
+                <span class="skill-tag">HubSpot Content Marketing</span>
+                <span class="skill-tag">freeCodeCamp Web Design</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Availability -->
+            <div>
+                <div class="section-title">Availability</div>
+                <div class="contact-item" style="color:#34d399;font-weight:600;font-size:11px">● Available Immediately
+                </div>
+                <div class="contact-item">20-40+ hrs/week</div>
+                <div class="contact-item">All US time zones</div>
+            </div>
+
+        </div>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <div class="main">
+
+            <!-- Profile Banner -->
+            <div class="header-banner">
+                <div class="title">AI Training & Data Annotation Professional</div>
+                <p>
+                    Computer Science graduate with hands-on experience in AI model evaluation, RLHF, data annotation,
+                    and full-stack development.
+                    Skilled at evaluating AI outputs for accuracy, safety, and helpfulness. Multilingual (EN/FR/JP)
+                    professional with
+                    strong attention to detail and proven ability to work independently in remote, guideline-driven
+                    environments.
+                </p>
+            </div>
+
+            <!-- Key Qualifications -->
+            <div>
+                <div class="section-title">Why Hire Me — Key Qualifications</div>
+                <div class="qual-grid">
+                    <div class="qual-item">BSc Computer Science — strong analytical foundation</div>
+                    <div class="qual-item">Trilingual: English, French, Japanese</div>
+                    <div class="qual-item">Experienced with RLHF and AI response ranking</div>
+                    <div class="qual-item">Proficient in Python, JS, SQL for coding tasks</div>
+                    <div class="qual-item">95%+ accuracy rate on quality audits</div>
+                    <div class="qual-item">Self-managed remote worker, flexible schedule</div>
+                    <div class="qual-item">Strong written communication & feedback skills</div>
+                    <div class="qual-item">Fast learner — adapts quickly to new guidelines</div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div>
+                <div class="section-title">Relevant Experience</div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">AI Model Trainer & RLHF Evaluator</span>
+                        <span class="exp-date">2024 – Present</span>
+                    </div>
+                    <div class="exp-company">Freelance — Remote (Contract)</div>
+                    <ul class="exp-bullets">
+                        <li>Evaluated and ranked AI-generated responses across domains: coding, math, creative writing,
+                            and factual reasoning</li>
+                        <li>Performed side-by-side comparisons of model outputs, selecting and justifying preferred
+                            responses with detailed rationale</li>
+                        <li>Wrote diverse, high-quality prompts to stress-test AI capabilities and identify failure
+                            modes</li>
+                        <li>Classified content for safety, toxicity, and policy compliance across multilingual datasets
+                            (EN/FR)</li>
+                        <li>Maintained 95%+ inter-annotator agreement scores on quality benchmarks</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Search Relevance & Content Quality Evaluator</span>
+                        <span class="exp-date">2024 – Present</span>
+                    </div>
+                    <div class="exp-company">Freelance — Remote (Contract)</div>
+                    <ul class="exp-bullets">
+                        <li>Evaluated search engine results for relevance, quality, and user intent matching using
+                            structured rubrics</li>
+                        <li>Reviewed and rated ads quality for search and social media platforms</li>
+                        <li>Assessed bilingual content (EN/FR) for cultural sensitivity, linguistic accuracy, and tone
+                        </li>
+                        <li>Provided detailed written feedback with specific, actionable improvement recommendations
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Software Engineer — AI Integration Specialist</span>
+                        <span class="exp-date">2023 – Present</span>
+                    </div>
+                    <div class="exp-company">Independent Projects — Remote</div>
+                    <ul class="exp-bullets">
+                        <li>Built AI-powered web app integrating DALL-E 3, FLUX.1, and Pollinations.ai APIs for
+                            automated image generation</li>
+                        <li>Developed production-grade applications with React, Next.js, TypeScript, and Python</li>
+                        <li>Experienced with API design, error handling, state management, and debugging complex build
+                            systems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div>
+                <div class="section-title">Technical Proficiency</div>
+                <div class="tech-grid">
+                    <div class="tech-label">AI/ML</div>
+                    <div class="tech-value">RLHF, Prompt Engineering, Data Annotation, NLP, Content Moderation, Model
+                        Evaluation</div>
+                    <div class="tech-label">Coding</div>
+                    <div class="tech-value">Python, JavaScript, TypeScript, SQL, HTML/CSS, React, Next.js, Node.js</div>
+                    <div class="tech-label">Tools</div>
+                    <div class="tech-value">Git, GitHub, REST APIs, VS Code, Label Studio, Prodigy, Jupyter</div>
+                    <div class="tech-label">Data</div>
+                    <div class="tech-value">JSON, CSV, Data Cleaning, Regex, Web Scraping, Spreadsheets</div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <div class="section-title">Education</div>
+                <div class="edu-title">Bachelor of Science in Computer Science</div>
+                <div class="edu-detail">Coursework: Machine Learning, AI, Data Structures, Algorithms, Software
+                    Engineering, NLP, Databases</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Print/Save Button -->
+    <button class="print-btn no-print" onclick="window.print()">📄 Save as PDF</button>
+
+</body>
+
+</html>
