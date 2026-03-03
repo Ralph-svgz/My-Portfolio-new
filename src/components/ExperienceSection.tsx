@@ -40,9 +40,12 @@ const ExperienceSection = () => (
           key={exp.role}
           className="relative pl-8 md:pl-0 border-l md:border-l-0 border-black/20 md:grid md:grid-cols-[1fr_2fr] md:gap-8 pb-12 last:pb-0"
         >
+          {/* Mobile timeline dot */}
+          <div className="md:hidden absolute top-1.5 -left-[5px] w-[9px] h-[9px] rounded-full bg-black"></div>
+
           <div className="md:text-right md:pr-8 md:border-r border-black/20 relative">
-            <div className="hidden md:block absolute top-1 -right-[5px] w-[9px] h-[9px] rounded-full bg-black"></div>
-            <div className="md:hidden absolute top-1 -left-[5px] w-[9px] h-[9px] rounded-full bg-black"></div>
+            {/* Desktop timeline dot */}
+            <div className="hidden md:block absolute top-1.5 -right-[5px] w-[9px] h-[9px] rounded-full bg-black"></div>
 
             <h4 className="font-mono text-sm tracking-widest text-foreground/60 uppercase mb-1">
               {exp.period}
