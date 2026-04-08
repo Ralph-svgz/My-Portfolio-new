@@ -8,10 +8,7 @@ const AboutSection = () => {
         <AnimatedAvatar />
         <div className="flex-1">
           <p className="body-text max-w-2xl">
-            I'm a results-driven Computer Science graduate and software engineer
-            with hands-on experience in AI integration, full-stack web
-            development, and data quality evaluation. I specialize in bridging the
-            gap between human expertise and AI systems.
+            I'm a results-driven Computer Science graduate with hands-on experience building interactive, high-performance web applications and participating in AI model evaluation. I specialize in bridging the gap between human expertise and complex AI systems through clean frontend architectures.
           </p>
           <p className="body-text max-w-2xl mt-6">
             From training large language models through RLHF and prompt

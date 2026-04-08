@@ -9,29 +9,23 @@ const skillCategories = [
       "TypeScript",
       "JavaScript",
       "Tailwind CSS",
-      "Zustand",
-      "TanStack Query",
       "Framer Motion",
       "Vite",
     ],
   },
   {
-    title: "Backend & DB",
-    skills: ["Node.js", "Firebase", "MongoDB", "Hive", "REST APIs"],
-  },
-  {
     title: "Web3 & AI",
-    skills: ["Aptos", "Move", "AI Integration", "Prompt Engineering"],
+    skills: ["AI Integration", "Prompt Engineering"],
   },
   {
-    title: "Tools & Mobile",
-    skills: ["Flutter", "Dart", "Git", "GitHub", "Figma", "Vercel"],
+    title: "Tools",
+    skills: ["Git", "GitHub", "Vercel"],
   },
 ];
 
 const SkillsSection = () => (
   <SectionBlock id="skills" title="Technical Skills">
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 mb-16">
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mb-16">
       {skillCategories.map((category, idx) => (
         <div
           key={category.title}

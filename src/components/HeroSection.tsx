@@ -9,10 +9,10 @@ import {
 } from "lucide-react";
 
 const roles = [
-  "AI Training Specialist",
+  "Frontend Engineer",
   "Software Engineer",
-  "Full-Stack Developer",
-  "Multilingual Professional",
+  "AI Training Specialist",
+  "Interactive Web Developer",
 ];
 
 const HeroSection = () => {
