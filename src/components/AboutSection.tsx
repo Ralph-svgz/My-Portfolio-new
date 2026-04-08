@@ -8,19 +8,13 @@ const AboutSection = () => {
         <AnimatedAvatar />
         <div className="flex-1">
           <p className="body-text max-w-2xl">
-            I'm a results-driven Computer Science graduate with hands-on experience building interactive, high-performance web applications and participating in AI model evaluation. I specialize in bridging the gap between human expertise and complex AI systems through clean frontend architectures.
+            I'm a <strong>Frontend Engineer</strong> with a passion for building immersive, high-performance web applications that merge cutting-edge technology with intuitive design. With a foundation in Computer Science, I specialize in crafting fluid digital experiences using React, Next.js, and Three.js.
           </p>
           <p className="body-text max-w-2xl mt-6">
-            From training large language models through RLHF and prompt
-            engineering, to building production-grade web applications with modern
-            frameworks like React and Next.js, I focus on creating high-quality,
-            scalable solutions.
+            My expertise extends beyond traditional frontend work, I have deep experience integrating AI workflows and RLHF methodologies into production environments ,bridging the gap between intelligent systems and human-centric interfaces.
           </p>
           <p className="body-text max-w-2xl mt-6 mb-8">
-            I embrace the philosophy of <strong>vibe coding</strong>—blending
-            AI-assisted tools with a strong design aesthetic to rapidly translate
-            complex ideas into fluid, highly polished digital experiences while
-            maintaining clean architecture.
+            I emphasize high-velocity development by effectively leveraging AI-assisted tools to streamline workflows while maintaining an uncompromising focus on design precision. I thrive on translating complex requirements into fluid, highly polished digital experiences that adhere to best practices in performance and scalability.
           </p>
         </div>
       </div>

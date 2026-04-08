@@ -4,17 +4,17 @@ const experiences = [
   {
     role: "Frontend Engineer",
     company: "IBBUL-Years",
-    period: "2023 – Present",
+    period: "2024 – Present",
     description: [
       "Engineered a highly interactive Next.js web application utilizing Framer Motion for complex scroll-based animations.",
       "Implemented robust media handling components with Intersection Observers for lazy-loading performance optimization.",
-      "Integrated @react-three/fiber for immersive 3D graphics rendering, elevating visual storytelling."
+      "Integrated react-three/fiber for immersive 3D graphics rendering, elevating visual storytelling."
     ],
   },
   {
     role: "Software Engineer (Python)",
     company: "Independent Projects",
-    period: "2022 – 2023",
+    period: "2023 – 2024",
     description: [
       "Developed an interactive 2D Snake game in Python using Pygame, demonstrating a solid grasp of object-oriented programming.",
       "Implemented core application logic including state management, grid-based rendering, and real-time collision detection.",
@@ -24,7 +24,7 @@ const experiences = [
   {
     role: "Frontend Developer / Engineer",
     company: "BrickMeme",
-    period: "2023 – Present",
+    period: "2022 – 2023",
     description: [
       "Architected and built an AI-powered web application integrating DALL-E 3 and FLUX.1 APIs for automated image generation.",
       "Developed production-grade, highly responsive user interfaces using modern React, Next.js, and TypeScript.",
