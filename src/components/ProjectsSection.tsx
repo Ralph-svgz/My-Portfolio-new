@@ -29,13 +29,12 @@ const projects = [
     liveUrl: "#",
   },
   {
-    title: "Upcoming Project",
+    title: "Aegis Solana",
     description:
-      "A brand new web application currently in the planning and development phase. Check back soon for updates!",
-    tags: ["TBD", "Frontend", "Web Dev"],
-    githubUrl: "#",
-    liveUrl: "#",
-    disabled: true,
+      "An advanced wallet and token risk scanner built for the Solana ecosystem. Detects vulnerabilities, analyzes token risks, and assesses transaction safety.",
+    tags: ["Next.js", "Solana", "Web3", "Scanner"],
+    githubUrl: "https://github.com/Ralph-svgz/Aegis-Solana",
+    liveUrl: "https://www.aegissolana.xyz/",
   },
 ];
 
