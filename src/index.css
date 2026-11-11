@@ -964,6 +964,25 @@ a.row:hover .row-stack {
   .cta {
     border-top: var(--line) solid var(--ink);
   }
+  /* Portrait first on phones, with the code card stacked under it instead of overlapping. */
+  .hero-art {
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+    padding: 44px 20px 30px;
+    border-top: 0;
+    border-bottom: var(--line) solid var(--ink);
+  }
+  .frame {
+    width: min(100% - 16px, 360px);
+  }
+  .code-card {
+    position: static;
+    max-width: 100%;
+    overflow-x: auto;
+  }
   .side-label {
     flex-direction: row;
     justify-content: flex-start;
@@ -997,6 +1016,102 @@ a.row:hover .row-stack {
 }
 
 @media (max-width: 520px) {
+  body {
+    padding: 8px;
+    font-size: 13.5px;
+  }
+  .sheet {
+    border-width: 2px;
+  }
+  .hero > *,
+  .split > *,
+  .exp > * {
+    min-width: 0;
+  }
+  .mark,
+  .nav-contact {
+    padding: 12px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    min-width: 0;
+  }
+  .mark {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .nav nav {
+    gap: 0 14px;
+    padding: 6px 12px;
+    font-size: 10.5px;
+  }
+  .hero-copy {
+    padding: 28px 16px 32px;
+  }
+  h1 {
+    font-size: clamp(21px, 7.4vw, 34px);
+    overflow-wrap: anywhere;
+  }
+  .lede {
+    font-size: 14px;
+  }
+  .actions {
+    gap: 12px;
+  }
+  .actions .btn {
+    flex: 1 1 100%;
+    justify-content: space-between;
+  }
+  .hero-art {
+    padding: 36px 14px 26px;
+  }
+  .featured {
+    padding: 20px 14px 24px;
+  }
+  .card-shot {
+    padding: 10px;
+  }
+  .card-body {
+    padding: 16px 14px 20px;
+  }
+  .card h3 {
+    font-size: 18px;
+    overflow-wrap: anywhere;
+  }
+  .card .btn {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .certs {
+    padding: 22px 14px;
+  }
+  .exp-body {
+    padding: 22px 14px;
+  }
+  .timeline h3 {
+    font-size: 12.5px;
+    overflow-wrap: anywhere;
+  }
+  .cta {
+    padding: 26px 16px 120px;
+  }
+  .cta h2 {
+    font-size: 20px;
+  }
+  .skill-col {
+    padding: 16px 12px 18px;
+    min-width: 0;
+  }
+  .skill-col h3 {
+    white-space: normal;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .foot .socials {
+    padding: 8px 12px;
+    gap: 8px;
+  }
   .skill-grid {
     grid-template-columns: repeat(2, 1fr);
   }
