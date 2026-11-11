@@ -172,9 +172,6 @@ export default function Index() {
             </div>
 
             <div className="hero-art halftone">
-              <span className="kana kana-side" aria-hidden="true">
-                ポートフォリオ
-              </span>
               <figure className="frame">
                 <AsciiPortrait play={loaded} />
               </figure>
@@ -197,18 +194,12 @@ export default function Index() {
           <section className="skills" id="skills" aria-labelledby="skills-h">
             <div className="side-label side-violet">
               <h2 id="skills-h">Skills</h2>
-              <span className="kana" aria-hidden="true">
-                スキル
-              </span>
             </div>
             <div className="skill-grid">
               {skills.map((s) => (
                 <div className="skill-col" key={s.group}>
                   <h3>
                     {s.group}
-                    <span className="kana" aria-hidden="true">
-                      {s.jp}
-                    </span>
                   </h3>
                   <ul>
                     {s.items.map((i) => (
@@ -230,9 +221,6 @@ export default function Index() {
                 <div>
                   <h2 id="projects-h">
                     Featured projects
-                    <span className="kana" aria-hidden="true">
-                      作品
-                    </span>
                   </h2>
                   <a
                     className="btn btn-small"
@@ -317,9 +305,6 @@ export default function Index() {
             <aside className="certs" id="certs" aria-labelledby="certs-h">
               <h2 id="certs-h">
                 Certifications
-                <span className="kana" aria-hidden="true">
-                  資格
-                </span>
               </h2>
               <ul>
                 {certifications.map((c) => (
@@ -342,9 +327,6 @@ export default function Index() {
             <section className="exp" id="experience" aria-labelledby="exp-h">
               <div className="side-label side-pink">
                 <h2 id="exp-h">Experience</h2>
-                <span className="kana" aria-hidden="true">
-                  経歴
-                </span>
               </div>
               <div className="exp-body">
                 <ol className="timeline">
@@ -382,9 +364,6 @@ export default function Index() {
               </a>
               <svg className="burst" viewBox="0 0 100 100" aria-hidden="true">
                 <polygon points="50,2 60,24 82,12 76,36 98,42 80,56 94,76 70,74 68,98 50,82 32,98 30,74 6,76 20,56 2,42 24,36 18,12 40,24" />
-                <text x="50" y="60" textAnchor="middle">
-                  ドン
-                </text>
               </svg>
             </section>
           </div>

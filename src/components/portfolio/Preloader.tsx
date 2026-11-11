@@ -81,7 +81,7 @@ export default function Preloader({ onDone }: { onDone: () => void }) {
           {".".repeat(BAR - filled)}] {String(pct).padStart(3, " ")}%
         </p>
         <p className="preloader-note">
-          loading portfolio <span className="kana">ロード中</span>
+          loading portfolio
         </p>
       </div>
     </div>

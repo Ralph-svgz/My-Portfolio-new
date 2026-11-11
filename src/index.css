@@ -9,7 +9,6 @@
   --line: 3px;
   --display: "Archivo", "Arial Black", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
-  --kana: "DotGothic16", "Yu Gothic", "Meiryo", sans-serif;
 }
 
 *,
@@ -79,20 +78,6 @@ h3 {
 }
 h2 {
   font-size: 19px;
-}
-
-.kana {
-  font-family: var(--kana);
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: none;
-  opacity: 0.55;
-}
-h2 .kana,
-h3 .kana {
-  margin-left: 10px;
-  vertical-align: 2px;
 }
 
 /* ---------- The sheet: one bordered page, panels divided by rules ---------- */
@@ -299,14 +284,6 @@ h1 {
   padding: clamp(36px, 5vw, 64px) clamp(24px, 4vw, 56px) clamp(120px, 12vw, 150px);
   overflow: hidden;
 }
-.kana-side {
-  position: absolute;
-  top: 18px;
-  right: 14px;
-  writing-mode: vertical-rl;
-  font-size: 13px;
-  opacity: 0.8;
-}
 .frame {
   position: relative;
   width: min(100%, 390px);
@@ -367,9 +344,6 @@ h1 {
 .side-pink {
   background: var(--soft);
 }
-.side-label .kana {
-  opacity: 0.85;
-}
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -384,11 +358,6 @@ h1 {
 .skill-col h3 {
   font-size: 12.5px;
   white-space: nowrap;
-}
-.skill-col h3 .kana {
-  display: block;
-  margin: 5px 0 0;
-  font-size: 10.5px;
 }
 .skill-col ul {
   margin-top: 12px;
@@ -781,11 +750,6 @@ a.row:hover .row-stack {
   stroke: var(--ink);
   stroke-width: 2.2;
   stroke-linejoin: round;
-}
-.burst text {
-  font-family: var(--kana);
-  font-size: 22px;
-  fill: var(--ink);
 }
 .cta:hover .burst {
   animation: thump 0.4s ease;
@@ -1193,8 +1157,4 @@ a.row:hover .row-stack {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--soft);
-}
-.preloader-note .kana {
-  margin-left: 8px;
-  opacity: 0.9;
 }

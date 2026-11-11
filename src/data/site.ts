@@ -68,21 +68,19 @@ export const featured: Project[] = [
   },
 ];
 
-export const skills: { group: string; jp: string; items: string[] }[] = [
+export const skills: { group: string; items: string[] }[] = [
   {
     group: "AI training",
-    jp: "トレーニング",
     items: ["Prompt writing", "Reference answers", "Output evaluation", "Rubric scoring", "Data annotation"],
   },
   {
     group: "Review",
-    jp: "レビュー",
     items: ["General reasoning", "Instruction checks", "Fact-checking", "Error spotting", "Written rationales"],
   },
-  { group: "Frontend", jp: "フロント", items: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"] },
-  { group: "Backend", jp: "バック", items: ["Node.js", "PostgreSQL", "Python", "LLM APIs", "Multi-agent systems"] },
-  { group: "Writing", jp: "ライティング", items: ["Technical writing", "Copywriting", "Documentation", "Community"] },
-  { group: "Shipping", jp: "デプロイ", items: ["Vercel", "Railway", "Ubuntu VPS", "Docker", "Git"] },
+  { group: "Frontend", items: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"] },
+  { group: "Backend", items: ["Node.js", "PostgreSQL", "Python", "LLM APIs", "Multi-agent systems"] },
+  { group: "Writing", items: ["Technical writing", "Copywriting", "Documentation", "Community"] },
+  { group: "Shipping", items: ["Vercel", "Railway", "Ubuntu VPS", "Docker", "Git"] },
 ];
 
 export const certifications = [
