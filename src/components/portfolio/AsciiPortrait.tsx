@@ -99,7 +99,7 @@ export default function AsciiPortrait({ play = true }: { play?: boolean }) {
       const data = uctx.getImageData(0, 0, under.width, under.height);
       const lut = new Uint8ClampedArray(256);
       for (let i = 0; i < 256; i++) {
-        lut[i] = Math.pow(Math.min(1, Math.max(0, (i / 255 - lo) / span)), 0.6) * 255 * 0.34;
+        lut[i] = Math.pow(Math.min(1, Math.max(0, (i / 255 - lo) / span)), 0.6) * 255 * 0.26;
       }
       const d = data.data;
       for (let i = 0; i < d.length; i += 4) {
@@ -154,7 +154,8 @@ export default function AsciiPortrait({ play = true }: { play?: boolean }) {
       canvas.width = Math.round(w * dpr);
       canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      cols = Math.max(48, Math.round(w / 4.8));
+      // Keep characters big enough to read as text, especially on phones.
+      cols = Math.max(36, Math.round(w / (w < 340 ? 6.4 : 5.8)));
       cw = w / cols;
       chh = cw * 1.72;
       rows = Math.ceil(h / chh);

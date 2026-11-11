@@ -316,6 +316,8 @@ h1 {
   box-shadow: 16px -16px 0 -3px var(--lime), 16px -16px 0 0 var(--ink);
 }
 .ascii-scene {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -976,7 +978,8 @@ a.row:hover .row-stack {
     border-bottom: var(--line) solid var(--ink);
   }
   .frame {
-    width: min(100% - 16px, 360px);
+    flex: none;
+    width: min(calc(100% - 16px), 360px);
   }
   .code-card {
     position: static;
