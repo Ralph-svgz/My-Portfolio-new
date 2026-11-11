@@ -6,7 +6,7 @@ export const person = {
   intro:
     "I write prompts and grade model output for AI labs, and I build the web apps and multi-agent systems that put those models to work.",
   location: "Nigeria, remote",
-  email: "yorinobuaraska761@gmail.com",
+  email: "yorinobuarasaka761@gmail.com",
   github: "https://github.com/gojoisretarded",
   linkedin: "https://www.linkedin.com/in/samuelraphel-ab53bb293",
   telegram: "https://t.me/utakatatendo2",
